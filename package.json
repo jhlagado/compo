@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start": "nodemon --watch src --ext ts --exec \"node --loader ts-node/esm\" src/server.ts"
+    "prestart": "pnpm run build",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
